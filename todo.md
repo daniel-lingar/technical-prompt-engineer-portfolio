@@ -5,6 +5,7 @@
 - [ ] Confirm the portfolio URL resolves for external visitors.
 - [ ] Configure the client router with the GitHub Pages project base path.
 - [ ] Redeploy the router correction and verify the live homepage.
+- [ ] Replace the client-side route switch with the single portfolio entry route required by GitHub Pages.
 
 - [ ] Inspect current GitHub profile pins.
 - [ ] Pin the public technical-prompt-engineer-portfolio repository.
