@@ -55,10 +55,21 @@ const schemaLines = [
   ["<output>", "PASS | FAIL | INSUFFICIENT", "</output>"],
 ];
 
+const links = {
+  profile: "https://github.com/daniel-lingar",
+  portfolioHome: "https://daniel-lingar.github.io/technical-prompt-engineer-portfolio/",
+  portfolioRepo: "https://github.com/daniel-lingar/technical-prompt-engineer-portfolio",
+  application: "https://github.com/daniel-lingar/technical-prompt-engineer-portfolio/blob/main/APPLICATION_PROFILE.md",
+  schemas: "https://github.com/daniel-lingar/technical-prompt-engineer-portfolio/blob/main/PROMPT_SCHEMAS.md",
+  curriculum: "https://daniel-lingar.github.io/wrh-master-curriculum/curriculum/",
+};
+
+const isGitHubPagesBuild = import.meta.env.BASE_URL !== "/";
+
 function RailMark() {
   return (
     <div className="relative grid h-12 w-12 place-items-center border border-[#202523] bg-[#d64e32] shadow-[4px_4px_0_#202523]" aria-hidden="true">
-      <img src="/manus-storage/calibration-aperture-logo_8b5fc95a.png" alt="" className="h-9 w-9 object-contain brightness-0 invert" />
+      {isGitHubPagesBuild ? <span className="font-mono text-2xl font-medium leading-none text-[#fffaf2]">⊙</span> : <img src="/manus-storage/calibration-aperture-logo_8b5fc95a.png" alt="" className="h-9 w-9 object-contain brightness-0 invert" />}
     </div>
   );
 }
@@ -126,10 +137,10 @@ export default function Home() {
         <main id="main-content" className="min-w-0">
           <section id="top" className="relative isolate min-h-[730px] overflow-hidden border-b border-[#202523]/15 px-5 pb-12 pt-8 sm:px-8 sm:pt-10 md:px-12 lg:min-h-screen lg:px-16 lg:pt-14 xl:px-20">
             <div className="calibration-grid pointer-events-none absolute inset-y-0 right-0 z-[-2] w-[55%] opacity-55" />
-            <div className="absolute inset-y-0 right-0 z-[-1] hidden w-[54%] overflow-hidden lg:block">
+            {!isGitHubPagesBuild && <div className="absolute inset-y-0 right-0 z-[-1] hidden w-[54%] overflow-hidden lg:block">
               <img src="/manus-storage/calibration-hero_7228e298.jpg" alt="Abstract calibration materials arranged on a research surface" className="h-full w-full object-cover mix-blend-multiply opacity-95" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#f5f0e6] via-[#f5f0e6]/55 to-transparent" />
-            </div>
+            </div>}
             <div className="absolute right-5 top-8 font-mono text-[10px] uppercase tracking-[0.16em] text-[#63706c] sm:right-8 lg:right-12">Field note / 2026</div>
 
             <div className="relative flex max-w-[790px] flex-col pt-20 sm:pt-28 lg:pt-[18vh]">
@@ -147,7 +158,7 @@ export default function Home() {
                 <a href="#schemas" className="group flex items-center gap-2 border border-[#202523] bg-[#202523] px-5 py-3 text-[#fffaf2] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:-translate-y-0.5 active:scale-[0.97]">
                   Inspect schemas <ArrowDownRight size={16} className="transition-transform duration-200 group-hover:translate-y-0.5 group-hover:translate-x-0.5" />
                 </a>
-                <a href="./APPLICATION_PROFILE.md" className="group flex items-center gap-2 border border-[#202523]/25 bg-[#f5f0e6]/75 px-5 py-3 transition-colors hover:border-[#d64e32] hover:text-[#d64e32] focus-visible:border-[#d64e32] focus-visible:text-[#d64e32] active:scale-[0.97]">
+                <a href={links.application} target="_blank" rel="noreferrer" className="group flex items-center gap-2 border border-[#202523]/25 bg-[#f5f0e6]/75 px-5 py-3 transition-colors hover:border-[#d64e32] hover:text-[#d64e32] focus-visible:border-[#d64e32] focus-visible:text-[#d64e32] active:scale-[0.97]">
                   Read application profile <FileText size={16} />
                 </a>
               </div>
@@ -186,10 +197,10 @@ export default function Home() {
               <div>
                 <h2 className="max-w-md font-display text-[clamp(2.2rem,4.2vw,4.6rem)] font-extrabold leading-[0.98] tracking-[-0.065em]">Structure the task.<br /><span className="text-[#e97b61]">Protect the decision.</span></h2>
                 <p className="mt-7 max-w-md text-[1.1rem] leading-[1.55] text-[#c6cbc7]">This evaluator schema makes roles, inputs, constraints, and output conditions explicit. It gives the reviewer a way to examine failure paths before they appear in production.</p>
-                <a href="./PROMPT_SCHEMAS.md" className="mt-8 inline-flex items-center gap-2 border-b border-[#e97b61] pb-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[#f5f0e6] transition-colors hover:text-[#e97b61] focus-visible:text-[#e97b61]">Open full schema file <ArrowUpRight size={14} /></a>
+                <a href={links.schemas} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 border-b border-[#e97b61] pb-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[#f5f0e6] transition-colors hover:text-[#e97b61] focus-visible:text-[#e97b61]">Open full schema file <ArrowUpRight size={14} /></a>
               </div>
               <div className="relative overflow-hidden border border-[#f5f0e6]/20 bg-[#16201d] p-6 shadow-[8px_8px_0_rgba(214,78,50,0.8)] sm:p-9">
-                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/manus-storage/schema-cards_2e9551e4.jpg')", backgroundPosition: "center", backgroundSize: "cover", mixBlendMode: "screen" }} />
+                {!isGitHubPagesBuild && <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/manus-storage/schema-cards_2e9551e4.jpg')", backgroundPosition: "center", backgroundSize: "cover", mixBlendMode: "screen" }} />}
                 <div className="relative">
                   <div className="mb-7 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-[#9ba8a2]"><Brackets size={14} className="text-[#e97b61]" /> schema / evaluator-v1</div>
                   <div className="space-y-4 font-mono text-[clamp(0.71rem,1.2vw,0.9rem)] leading-relaxed">
@@ -221,7 +232,7 @@ export default function Home() {
                 </div>
                 <h2 className="max-w-md font-display text-[clamp(2.2rem,4vw,4.5rem)] font-extrabold leading-[0.98] tracking-[-0.065em]">Build an audit trail that a reviewer can follow.</h2>
                 <p className="mt-7 max-w-md text-[1.1rem] leading-[1.55] text-[#52605b]">“What Really Happened” is a Markdown-native curriculum architecture. It progresses from source boundaries to a published dossier, showing the same information-design habits that support reliable evaluation work.</p>
-                <a href="./CURRICULUM.md" className="mt-8 inline-flex items-center gap-2 border-b border-[#d64e32] pb-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[#202523] transition-colors hover:text-[#d64e32] focus-visible:text-[#d64e32]">Read all 75 sessions <ArrowUpRight size={14} /></a>
+                <a href={links.curriculum} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 border-b border-[#d64e32] pb-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[#202523] transition-colors hover:text-[#d64e32] focus-visible:text-[#d64e32]">Open published curriculum <ArrowUpRight size={14} /></a>
               </div>
               <div className="border-t border-[#202523]/15">
                 {curriculum.map(([range, title, detail]) => (
@@ -236,10 +247,10 @@ export default function Home() {
           </section>
 
           <section id="systems" className="relative overflow-hidden border-y border-[#202523]/15 bg-[#e2eaf0] px-5 py-20 sm:px-8 md:px-12 lg:px-16 lg:py-28 xl:px-20">
-            <div className="absolute inset-y-0 right-0 hidden w-[42%] overflow-hidden lg:block">
+            {!isGitHubPagesBuild && <div className="absolute inset-y-0 right-0 hidden w-[42%] overflow-hidden lg:block">
               <img src="/manus-storage/rubric-margins_c79a1453.jpg" alt="Annotated research notebook with review markers" className="h-full w-full object-cover mix-blend-multiply opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#e2eaf0] via-[#e2eaf0]/70 to-transparent" />
-            </div>
+            </div>}
             <div className="relative max-w-3xl">
               <SectionMarker index="04" label="Systems work" />
               <h2 className="max-w-2xl font-display text-[clamp(2.2rem,4.2vw,4.7rem)] font-extrabold leading-[0.98] tracking-[-0.065em]">Independent operations made <span className="text-[#d64e32]">legible.</span></h2>
@@ -263,8 +274,8 @@ export default function Home() {
                 <h2 className="max-w-2xl font-display text-[clamp(2.3rem,4.4vw,5rem)] font-extrabold leading-[0.98] tracking-[-0.07em]">A portfolio designed to be <span className="text-[#d64e32]">checked</span>, not just scanned.</h2>
                 <p className="mt-7 max-w-xl text-[1.12rem] leading-[1.55] text-[#52605b]">The application profile is plain-text compatible for remote assessment systems. The underlying Markdown files expose the curriculum structure, prompt logic, and documentation habits behind the summary.</p>
                 <div className="mt-9 flex flex-wrap gap-3 font-display text-sm font-bold">
-                  <a href="./APPLICATION_PROFILE.md" className="group flex items-center gap-2 bg-[#d64e32] px-5 py-3 text-[#fffaf2] shadow-[4px_4px_0_#202523] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#202523] focus-visible:-translate-y-0.5 active:scale-[0.97]">Open application profile <FileText size={16} /></a>
-                  <a href="./README.md" className="group flex items-center gap-2 border border-[#202523]/25 bg-[#fbf9f4] px-5 py-3 transition-colors hover:border-[#d64e32] hover:text-[#d64e32] focus-visible:border-[#d64e32] focus-visible:text-[#d64e32] active:scale-[0.97]">View repository guide <GitBranch size={16} /></a>
+                  <a href={links.application} target="_blank" rel="noreferrer" className="group flex items-center gap-2 bg-[#d64e32] px-5 py-3 text-[#fffaf2] shadow-[4px_4px_0_#202523] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#202523] focus-visible:-translate-y-0.5 active:scale-[0.97]">Open application profile <FileText size={16} /></a>
+                  <a href={links.portfolioRepo} target="_blank" rel="noreferrer" className="group flex items-center gap-2 border border-[#202523]/25 bg-[#fbf9f4] px-5 py-3 transition-colors hover:border-[#d64e32] hover:text-[#d64e32] focus-visible:border-[#d64e32] focus-visible:text-[#d64e32] active:scale-[0.97]">View repository source <GitBranch size={16} /></a>
                 </div>
               </div>
               <aside className="border-t-2 border-[#202523] bg-[#fbf9f4] p-6 sm:p-8">
@@ -283,10 +294,10 @@ export default function Home() {
           <footer className="border-t border-[#202523]/15 bg-[#202523] px-5 py-8 text-[#f5f0e6] sm:px-8 md:px-12 lg:px-16 xl:px-20">
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
               <div>
-                <div className="flex items-center gap-3"><img src="/manus-storage/calibration-aperture-logo_8b5fc95a.png" alt="" className="h-8 w-8 brightness-0 invert" /><p className="font-display text-lg font-extrabold tracking-[-0.04em]">CALIBRATION LAB</p></div>
+                <div className="flex items-center gap-3">{isGitHubPagesBuild ? <span className="grid h-8 w-8 place-items-center border border-[#e97b61] font-mono text-xl text-[#e97b61]">⊙</span> : <img src="/manus-storage/calibration-aperture-logo_8b5fc95a.png" alt="" className="h-8 w-8 brightness-0 invert" />}<p className="font-display text-lg font-extrabold tracking-[-0.04em]">CALIBRATION LAB</p></div>
                 <p className="mt-3 max-w-xl font-body text-[0.98rem] leading-relaxed text-[#b9c0bb]">Technical prompt engineering, evaluation architecture, and documentation systems for asynchronous AI operations.</p>
               </div>
-              <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[#b9c0bb]"><CheckCheck size={14} className="text-[#e97b61]" /> Reviewable by design</div>
+              <a href={links.profile} target="_blank" rel="noreferrer" className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[#b9c0bb] transition-colors hover:text-[#e97b61] focus-visible:text-[#e97b61]"><CheckCheck size={14} className="text-[#e97b61]" /> GitHub / Daniel Lingar</a>
             </div>
           </footer>
         </main>
@@ -294,4 +305,3 @@ export default function Home() {
     </div>
   );
 }
-

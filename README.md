@@ -2,6 +2,10 @@
 
 This repository contains a screening-focused application profile and a static portfolio built around **prompt architecture, rubric-based evaluation, Markdown documentation, and asynchronous systems work**.
 
+## Live Portfolio
+
+The public portfolio is published at [daniel-lingar.github.io/technical-prompt-engineer-portfolio](https://daniel-lingar.github.io/technical-prompt-engineer-portfolio/).
+
 ## Repository Contents
 
 | File | Purpose |
@@ -17,5 +21,4 @@ Run `pnpm dev` from the repository root, then open the local URL shown in the te
 
 ## Before Submitting Applications
 
-Replace `[EMAIL]`, `[GITHUB LINK]`, and `[GITHUB PAGES LINK]` in `APPLICATION_PROFILE.md` with live contact details and published URLs. Review all role and experience statements for accuracy before submission.
-
+Replace `[EMAIL]` in `APPLICATION_PROFILE.md` with the preferred application contact address. The profile already links to the verified GitHub account and published curriculum; review all role and experience statements for accuracy before submission.

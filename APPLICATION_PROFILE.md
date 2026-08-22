@@ -1,7 +1,7 @@
 # DANIEL BRET LINGAR
 
 **Technical Prompt Engineer & AI Evaluation Specialist**  
-Remote / Asynchronous Specialist | [EMAIL] | [GITHUB LINK]
+Remote / Asynchronous Specialist | [EMAIL] | [GitHub Profile](https://github.com/daniel-lingar)
 
 ## Professional Summary
 
@@ -47,10 +47,10 @@ I work effectively in asynchronous environments that require self-direction, car
 
 ## Portfolio Links
 
-- **Portfolio home:** `[GITHUB PAGES LINK]`
-- **75-session curriculum:** `[GITHUB PAGES LINK]/#curriculum`
-- **Prompt schemas:** `[GITHUB PAGES LINK]/#schemas`
-- **Repository source:** `[GITHUB REPOSITORY LINK]`
+- **Portfolio home:** [Technical Prompt Engineer & AI Evaluation Specialist](https://daniel-lingar.github.io/technical-prompt-engineer-portfolio/)
+- **GitHub profile:** [github.com/daniel-lingar](https://github.com/daniel-lingar)
+- **Published curriculum:** [What Really Happened — Curriculum Map](https://daniel-lingar.github.io/wrh-master-curriculum/curriculum/)
+- **Prompt schemas:** [Technical Prompt Engineer Portfolio — Prompt Schemas](https://github.com/daniel-lingar/technical-prompt-engineer-portfolio/blob/main/PROMPT_SCHEMAS.md)
+- **Repository source:** [Technical Prompt Engineer Portfolio](https://github.com/daniel-lingar/technical-prompt-engineer-portfolio)
 
-> Replace the bracketed contact and repository fields before submitting this document. Keep the body in plain text or Markdown when an application portal does not preserve visual formatting.
-
+> Replace `[EMAIL]` with your preferred application email before submitting. Keep the body in plain text or Markdown when an application portal does not preserve visual formatting.
