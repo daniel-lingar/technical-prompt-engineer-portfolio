@@ -1,0 +1,1 @@
+Create a JSON source card for the supplied public historical-source excerpt. Follow the required JSON schema exactly. Extract only facts present in the excerpt. Use an empty string or an empty list when the excerpt does not support a field. Preserve the supplied canonical source URL exactly.

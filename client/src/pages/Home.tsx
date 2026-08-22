@@ -41,11 +41,10 @@ const competencies = [
 ];
 
 const curriculum = [
-  ["01–15", "Frame the record", "Scope, sources, provenance, and unresolved questions."],
-  ["16–30", "Extract evidence", "Normalized observations, evidence labels, and source boundaries."],
-  ["31–45", "Test the narrative", "Conflicts, alternatives, uncertainty, and edge-case review."],
-  ["46–60", "Document judgment", "Annotated synthesis, method notes, and audit-ready writing."],
-  ["61–75", "Publish the trail", "Static portfolio structure, quality checks, and reviewer access."],
+  ["Part I", "Survival literacy", "Threat detection, freeze responses, dissociation, and pattern language."],
+  ["Part II", "Systems & reentry", "Resources, advocacy, institutional friction, and practical navigation."],
+  ["Part III", "Resilience & autonomy", "Agency, identity, sustainable change, and peer connection."],
+  ["Part IV", "Facilitation standards", "Safety protocols, risk management, and delivery expectations."],
 ];
 
 const schemaLines = [
@@ -62,6 +61,9 @@ const links = {
   application: "https://github.com/daniel-lingar/technical-prompt-engineer-portfolio/blob/main/APPLICATION_PROFILE.md",
   schemas: "https://github.com/daniel-lingar/technical-prompt-engineer-portfolio/blob/main/PROMPT_SCHEMAS.md",
   curriculum: "https://daniel-lingar.github.io/wrh-master-curriculum/curriculum/",
+  harness: "https://github.com/daniel-lingar/technical-prompt-engineer-portfolio/tree/main/evaluation-harness/horner_source_card",
+  harnessSpec: "https://github.com/daniel-lingar/technical-prompt-engineer-portfolio/blob/main/EVALUATION_HARNESS_SPEC.md",
+  corpusCommit: "https://github.com/daniel-lingar/horner-archive/tree/1ce7f7062559b2e132d9690f6f91df8f4452784e",
 };
 
 const isGitHubPagesBuild = import.meta.env.BASE_URL !== "/";
@@ -115,9 +117,10 @@ export default function Home() {
             {[
               ["01", "Method", "#method"],
               ["02", "Schemas", "#schemas"],
-              ["03", "Curriculum", "#curriculum"],
-              ["04", "Systems work", "#systems"],
-              ["05", "Application", "#application"],
+              ["03", "Evidence run", "#evidence-run"],
+              ["04", "Curriculum", "#curriculum"],
+              ["05", "Systems work", "#systems"],
+              ["06", "Application", "#application"],
             ].map(([number, label, href]) => (
               <a key={number} href={href} className="group flex items-center gap-3 py-2 transition-colors hover:text-[#d64e32] focus-visible:text-[#d64e32]">
                 <span className="w-5 text-[#d64e32]">{number}</span>
@@ -223,15 +226,39 @@ export default function Home() {
           </section>
 
           <section id="curriculum" className="px-5 py-20 sm:px-8 md:px-12 lg:px-16 lg:py-28 xl:px-20">
-            <SectionMarker index="03" label="Asynchronous curriculum" />
+            <section id="evidence-run" className="-mx-5 mb-20 border-y border-[#202523]/15 bg-[#ebe5d8] px-5 py-20 sm:-mx-8 sm:px-8 md:-mx-12 md:px-12 lg:-mx-16 lg:px-16 lg:py-28 xl:-mx-20 xl:px-20">
+              <SectionMarker index="03" label="Flagship evidence run" />
+              <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-20">
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[#d64e32]">Horner Archive / source-card extraction</p>
+                  <h2 className="mt-5 max-w-xl font-display text-[clamp(2.2rem,4.3vw,4.7rem)] font-extrabold leading-[0.98] tracking-[-0.065em]">Evidence exists before the <span className="text-[#d64e32]">metric.</span></h2>
+                  <p className="mt-7 max-w-xl text-[1.1rem] leading-[1.55] text-[#52605b]">A 50-case harness uses publicly inspectable historical-source passages to test schema discipline, source preservation, uncertainty handling, and evidence boundaries. Every case points to an immutable public source revision; no memoir or clinical material is used as model input.</p>
+                  <div className="mt-8 flex flex-wrap gap-3 font-display text-sm font-bold">
+                    <a href={links.harness} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#202523] px-5 py-3 text-[#fffaf2] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:-translate-y-0.5 active:scale-[0.97]">Inspect harness <FolderGit2 size={16} /></a>
+                    <a href={links.corpusCommit} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-[#202523]/25 bg-[#f5f0e6] px-5 py-3 transition-colors hover:border-[#d64e32] hover:text-[#d64e32] focus-visible:border-[#d64e32] focus-visible:text-[#d64e32] active:scale-[0.97]">Inspect pinned sources <ArrowUpRight size={16} /></a>
+                  </div>
+                </div>
+                <div className="border-t border-[#202523]/20">
+                  {[
+                    ["50", "real source cards", "Human-reviewed target checks from five public archive research records."],
+                    ["5", "source files", "CMSR, parcel, evidence matrix, field-note, and estate research records."],
+                    ["4", "prompt versions", "Baseline, schema, evidence-boundary, and status-handling instructions."],
+                    ["0", "performance claims", "No quality metric is displayed until a complete model run is reproducibly available."],
+                  ].map(([value, label, detail]) => <article key={label} className="grid gap-3 border-b border-[#202523]/15 py-5 sm:grid-cols-[75px_1fr] sm:items-baseline"><span className="font-display text-4xl font-extrabold tracking-[-0.06em] text-[#d64e32]">{value}</span><div><h3 className="font-display text-lg font-extrabold tracking-[-0.025em]">{label}</h3><p className="mt-1 max-w-xl font-body text-[0.98rem] leading-snug text-[#63706c]">{detail}</p></div></article>)}
+                  <p className="mt-6 border-l-2 border-[#d64e32] pl-4 font-mono text-[10px] uppercase leading-relaxed tracking-[0.1em] text-[#52605b]">Corpus integrity: 50 / 50 cases validated · Source commit pinned · Model-run results withheld pending available execution capacity.</p>
+                </div>
+              </div>
+            </section>
+
+            <SectionMarker index="04" label="Asynchronous curriculum" />
             <div className="grid gap-12 xl:grid-cols-[0.8fr_1.2fr] xl:gap-20">
               <div>
                 <div className="mb-5 flex items-end gap-4">
-                  <span className="font-display text-7xl font-extrabold leading-none tracking-[-0.08em] text-[#d64e32]">75</span>
-                  <span className="mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-[#63706c]">sessions<br />mapped</span>
+                  <span className="font-display text-7xl font-extrabold leading-none tracking-[-0.08em] text-[#d64e32]">77</span>
+                  <span className="mb-2 font-mono text-[10px] uppercase tracking-[0.14em] text-[#63706c]">source sessions<br />publicly indexed</span>
                 </div>
                 <h2 className="max-w-md font-display text-[clamp(2.2rem,4vw,4.5rem)] font-extrabold leading-[0.98] tracking-[-0.065em]">Build an audit trail that a reviewer can follow.</h2>
-                <p className="mt-7 max-w-md text-[1.1rem] leading-[1.55] text-[#52605b]">“What Really Happened” is a Markdown-native curriculum architecture. It progresses from source boundaries to a published dossier, showing the same information-design habits that support reliable evaluation work.</p>
+                <p className="mt-7 max-w-md text-[1.1rem] leading-[1.55] text-[#52605b]">“What Really Happened” is a non-clinical, Markdown-native curriculum architecture. Its published map shows the same information-design habits that support source boundaries, clear scope, and reviewable documentation.</p>
                 <a href={links.curriculum} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 border-b border-[#d64e32] pb-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[#202523] transition-colors hover:text-[#d64e32] focus-visible:text-[#d64e32]">Open published curriculum <ArrowUpRight size={14} /></a>
               </div>
               <div className="border-t border-[#202523]/15">
@@ -252,7 +279,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#e2eaf0] via-[#e2eaf0]/70 to-transparent" />
             </div>}
             <div className="relative max-w-3xl">
-              <SectionMarker index="04" label="Systems work" />
+              <SectionMarker index="05" label="Systems work" />
               <h2 className="max-w-2xl font-display text-[clamp(2.2rem,4.2vw,4.7rem)] font-extrabold leading-[0.98] tracking-[-0.065em]">Independent operations made <span className="text-[#d64e32]">legible.</span></h2>
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
                 {[
@@ -268,7 +295,7 @@ export default function Home() {
           </section>
 
           <section id="application" className="px-5 py-20 sm:px-8 md:px-12 lg:px-16 lg:py-28 xl:px-20">
-            <SectionMarker index="05" label="Application packet" />
+            <SectionMarker index="06" label="Application packet" />
             <div className="grid gap-12 xl:grid-cols-[1.15fr_0.85fr] xl:gap-20">
               <div>
                 <h2 className="max-w-2xl font-display text-[clamp(2.3rem,4.4vw,5rem)] font-extrabold leading-[0.98] tracking-[-0.07em]">A portfolio designed to be <span className="text-[#d64e32]">checked</span>, not just scanned.</h2>

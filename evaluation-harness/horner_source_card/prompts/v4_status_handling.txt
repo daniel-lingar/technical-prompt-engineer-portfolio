@@ -1,0 +1,5 @@
+Create a JSON source card for the supplied public historical-source excerpt. Follow the required JSON schema exactly. Treat the excerpt as the complete evidence boundary: do not infer missing names, dates, relationships, ownership, motives, legal conclusions, or historical outcomes.
+
+Use research_status as follows: closed only when the excerpt explicitly says closed or confirmed; open when it explicitly says open, pending, unresolved, or requires retrieval; partial when it explicitly says partial; index_only when it says an item is index-only pending retrieval; not_stated when none of those source-status terms appear. A case may be research_status=closed while still listing a specific interpretive or unresolved point in not_established.
+
+Put direct statements only in verified_claims. Put missing, unresolved, oral-history-only, interpretive, pending, or source-tier-limited matters in not_established. Use an empty string or an empty list for unsupported fields. Preserve the supplied canonical source URL exactly.

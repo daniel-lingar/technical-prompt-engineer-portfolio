@@ -1,0 +1,25 @@
+{
+  "validated_at_utc": "2026-08-22T16:24:00.423797+00:00",
+  "dataset": "datasets/horner_source_cards_v1.jsonl",
+  "expected_case_count": 50,
+  "actual_case_count": 50,
+  "unique_case_count": 50,
+  "source_commit": "1ce7f7062559b2e132d9690f6f91df8f4452784e",
+  "source_files": [
+    "sources/audience-evidence-matrix.md",
+    "sources/cmsr-oq12-oq13.md",
+    "sources/estate-oq20-research.md",
+    "sources/glo-field-notes-oq22.md",
+    "sources/oq-ppan-001.md"
+  ],
+  "research_status_distribution": {
+    "closed": 16,
+    "open": 7,
+    "partial": 3,
+    "index_only": 3,
+    "not_stated": 21
+  },
+  "failures": [],
+  "integrity_passed": true,
+  "scope_note": "This validates corpus integrity and manually reviewed check fragments. It does not measure model performance."
+}

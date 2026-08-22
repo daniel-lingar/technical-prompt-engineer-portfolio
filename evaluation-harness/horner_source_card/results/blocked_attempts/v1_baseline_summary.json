@@ -1,0 +1,22 @@
+{
+  "run_at_utc": "2026-08-22T16:22:46.467327+00:00",
+  "model": "gpt-5-mini",
+  "prompt_version": "v1_baseline",
+  "dataset": "datasets/horner_source_cards_v1.jsonl",
+  "dataset_cases": 50,
+  "metrics": {
+    "cases": 50,
+    "valid_schema_rate": 0.04,
+    "gold_check_accuracy": 0.0095,
+    "source_url_preservation_rate": 0.04,
+    "possible_grounding_flags": 1,
+    "forbidden_claim_hits": 0,
+    "failure_counts": {
+      "F03_target_miss": 50,
+      "F02_lexical_grounding_flag": 1,
+      "F01_schema": 48,
+      "F06_source_url_loss": 48
+    },
+    "scoring_note": "Lexical grounding flags are deterministic overlap heuristics and require human review; they are not semantic truth judgments."
+  }
+}
