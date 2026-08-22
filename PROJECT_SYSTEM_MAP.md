@@ -24,3 +24,4 @@ For recruiter review, begin with the technical portfolio, then inspect the WRH M
 ## Scope Boundary
 
 The WRH and Rescue Boat materials are non-clinical public education, not therapy, diagnosis, medical advice, legal advice, or crisis care. The technical portfolio demonstrates public prompt and evaluation artifacts; it does not claim employer-sponsored model training, paid RLHF annotation, or clinical credentials.
+
