@@ -15,6 +15,15 @@ This public portfolio represents one connected system of source organization, pl
 | **7. Independent research method** | [Johnson County Civil War Archive](https://github.com/daniel-lingar/horner-archive) | A separate evidence archive demonstrating research organization, documentary traceability, and public-history packaging. |
 | **8. Technical and AI-facing translation** | [Technical Prompt Engineer & AI Evaluation Specialist](https://github.com/daniel-lingar/technical-prompt-engineer-portfolio) | Prompt schemas, evidence boundaries, structured outputs, evaluation patterns, and reproducible documentation. |
 
+## The Personal Role of the Historical Archives
+
+Daniel describes the Horner and Lawrence J. Lingar World War II research as a meaningful break from the emotional demands of his memoir and trauma-related work. He reports that working on his own experiences while living with C-PTSD can bring him back into reliving those moments.
+
+Historical research offers another focus: it explores a past he did not personally experience, from before he was alive. The archives share research and publishing methods with his other projects, while also giving him somewhere else to direct his attention when he needs a break from his own memories.
+
+- [Horner Archive](https://github.com/daniel-lingar/horner-archive)
+- [Lawrence J. Lingar Archive](https://github.com/daniel-lingar/lawrence-j-lingar-archive)
+
 ## How the Work Connects
 
 The common method is simple: preserve the source base; separate drafts from canonical outputs; label scope and uncertainty; transform complex material into clear structures for different audiences; use version controls and checks; and publish artifacts that others can inspect.
