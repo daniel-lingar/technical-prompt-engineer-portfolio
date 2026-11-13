@@ -49,3 +49,5 @@ The **Technical Prompt Engineer & AI Evaluation Specialist** portfolio packages 
 2. The Capitol Contracts documentation states Daniel Bret Lingar should be described as **Director of Operations / Technical Lead / Curriculum Development Support** rather than owner, CEO, President, or final-control authority. It also states the company is not SDVOSB-certified.
 3. The projects include sensitive memoir and trauma-related subject matter. For a broad technical resume, present these as evidence of **plain-language systems design, source-to-publication workflows, curriculum architecture, and structured documentation**; do not foreground personal or clinical content unless the role is specifically relevant.
 4. The Capitol Contracts README contains related-project links pointing to a different GitHub account (`Mave9055`). This cross-account inconsistency should be corrected or clearly explained before relying on that repository as a primary recruiter-facing evidence source.
+
+**Resolution (2026-11-13):** Cross-account links corrected; related-project URLs now point to `daniel-lingar`; profile website updated. Original finding retained as history.

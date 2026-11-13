@@ -82,6 +82,8 @@ Also use role and ownership language carefully. Capitol Contracts documentation 
 Before sending recruiters to the system, consolidate the public record around a consistent reviewer journey.
 
 1. **Correct cross-account links.** The Capitol Contracts repository still lists related resources under the `Mave9055` account while the public evidence being presented is under `daniel-lingar`. Either correct each link or explain the relationship and source-of-truth clearly. [4]
+
+**Resolution (2026-11-13):** Cross-account links corrected; related-project URLs now point to `daniel-lingar`; profile website updated. Original finding retained as history.
 2. **Clarify canonical status.** The manuscript repositories currently distinguish a working source, a canonical release, and an archive; make the same labels unmistakable in each README and pin one `START HERE` file for the overall ecosystem. [3] [6] [7]
 3. **Add one ecosystem map.** Create a concise `PROJECT_SYSTEM_MAP.md` or an “How these projects connect” section on the portfolio homepage. A recruiter should see the progression: **Sources → Public Translation → Curriculum → Implementation → Evidence Archive → Evaluation Portfolio**.
 4. **Keep sensitive source material intentional.** Memoir content can substantiate the project-system provenance but may not be suitable as the first click for a general technical employer. Lead with methods, artifacts, and quality controls; disclose subject matter only when relevant.
